@@ -2,16 +2,12 @@ package nmap
 
 import (
 	"fmt"
-
-	"github.com/asciifaceman/gopen/pkg/parse"
 )
 
 // Options for task
 type Options struct {
-	Target  string
-	TmpFile string
-	Flags   []string
-	Content *parse.NmapRun
+	Target string
+	Flags  []string
 }
 
 // Option functional API for setting options
@@ -21,13 +17,6 @@ type Option func(*Options)
 func WithTarget(target string) Option {
 	return func(opt *Options) {
 		opt.Target = target
-	}
-}
-
-// WithFlag adds nmap flags
-func WithFlag(flag string) Option {
-	return func(opt *Options) {
-		opt.Flags = append(opt.Flags, flag)
 	}
 }
 
