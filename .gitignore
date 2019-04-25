@@ -1,0 +1,23 @@
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Build output
+*target/
+
+# Vagrant stuff
+*.vagrant/
+
+# Vendor stuff
+*vendor/
+
+#  Random
+.old/*
+
+# Junk
+*junk*
+
+*.vscode/
+docs/source/_build
